@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,10 +14,18 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    You are logged in!<br>You will be redirected to the home page automatically in 5 seconds.
                 </div>
             </div>
         </div>
     </div>
+    {{-- <script>
+        setTimeout(function () {
+            $('.torna-home')[0].click();
+        },2000);
+    </script> --}}
 </div>
+@endsection
+@section('script')
+    <script src="{{ asset('js/redirectfunction.js') }}" defer></script>
 @endsection
