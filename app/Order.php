@@ -18,4 +18,14 @@ class Order extends Model
         'cvc',
         'expires',
     ];
+
+    public function cart()
+    {
+        return $this->belongsTo('App\Cart');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

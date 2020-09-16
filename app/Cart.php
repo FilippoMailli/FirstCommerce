@@ -12,4 +12,19 @@ class Cart extends Model
         'paid',
 
     ];
+
+    public function order()
+    {
+        return $this->hasOne('App\Order');
+    }
+
+    public function products()
+    {
+        return $this->belongsToMany('App\Product');
+    }
+
+    public function order()
+    {
+        return $this->hasOne('App\Order');
+    }
 }

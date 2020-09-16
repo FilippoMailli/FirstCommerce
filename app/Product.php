@@ -13,4 +13,14 @@ class Product extends Model
         'discount',
         'total',
     ];
+
+    public function carts()
+    {
+        return $this->belongsToMany('App\Cart');
+    }
+
+    public function categories()
+    {
+        return $this->belongsToMany('App\Category');
+    }
 }
